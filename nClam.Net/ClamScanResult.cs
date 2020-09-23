@@ -1,4 +1,4 @@
-﻿namespace nClam
+﻿namespace nClam.Net
 {
     using System;
     using System.Collections.Generic;
@@ -31,7 +31,7 @@
             {
                 Result = ClamScanResults.Clean;
             }
-            else if(resultLowered.EndsWith("error"))
+            else if (resultLowered.EndsWith("error"))
             {
                 Result = ClamScanResults.Error;
             }
@@ -39,20 +39,20 @@
             {
                 Result = ClamScanResults.VirusDetected;
 
-                var files = rawResult.Split(new[] {"FOUND"}, StringSplitOptions.RemoveEmptyEntries);
+                var files = rawResult.Split(new[] { "FOUND" }, StringSplitOptions.RemoveEmptyEntries);
                 var infectedFiles = new List<ClamScanInfectedFile>();
-                foreach(var file in files)
+                foreach (var file in files)
                 {
                     var trimFile = file.Trim();
                     var splitFile = trimFile.Split();
-                    
+
                     infectedFiles.Add(new ClamScanInfectedFile() { FileName = before(trimFile), VirusName = after(trimFile) });
                 }
 
                 InfectedFiles = new ReadOnlyCollection<ClamScanInfectedFile>(infectedFiles);
             }
         }
-        
+
         public static string before(string s)
         {
             int l = s.LastIndexOf(":");

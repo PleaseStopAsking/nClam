@@ -1,0 +1,33 @@
+﻿<Project Sdk="Microsoft.NET.Sdk"
+  xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TargetFrameworks>netstandard2.0;net45</TargetFrameworks>
+    <Copyright>Copyright © nClam.Net Team 2017</Copyright>
+    <Company>nClam.Net Team</Company>
+    <Version>0.0.3</Version>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <PackageId>nClam.Net</PackageId>
+    <PackageVersion>0.0.3</PackageVersion>
+    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+    <PackageProjectUrl>https://github.com/PleaseStopAsking/nClam.Net</PackageProjectUrl>
+    <Description>A library to talk to a ClamAV server and perform virus scanning.</Description>
+    <PackageTags>clamav virus clam clamd nclam.net</PackageTags>
+    <Authors>PleaseStopAsking</Authors>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|netstandard2.0|AnyCPU'">
+    <LangVersion>latest</LangVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <Folder Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup Condition="'$(TargetFramework)'=='net45'">
+    <Reference Include="System" />
+    <Reference Include="System.IO" />
+    <Reference Include="System.Threading" />
+    <Reference Include="System.Threading.Tasks" />
+  </ItemGroup>
+</Project>

@@ -1,18 +1,18 @@
 ﻿using System;
 using System.Linq;
 using System.Threading.Tasks;
-using nClam;
+using nClam.Net;
 
 class Program
 {
     static async Task Main(string[] args)
     {
-        Console.WriteLine("nClam Test Application");
+        Console.WriteLine("nClam.Net Test Application");
         Console.WriteLine();
 
         Console.Write("\t• Testing connectivity: ");
 
-        var clam = new ClamClient("localhost", 3310);        
+        var clam = new ClamClient("localhost", 3310);
         var pingResult = await clam.PingAsync();
 
         if(!pingResult) {
@@ -21,7 +21,7 @@ class Program
         }
 
         Console.WriteLine("connected.");
-        
+
         Console.Write("\t• Scanning file: ");
         var scanResult = await clam.ScanFileOnServerAsync("C:\\test.txt");  //any file you would like!
 

@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Linq;
 using System.Threading.Tasks;
-using nClam;
+using nClam.Net;
 
 class Program
 {
@@ -23,6 +23,6 @@ class Program
                 Console.WriteLine("Woah an error occured! Error: {0}", scanResult.RawResult);
                 break;
         }
-        
+
     }
 }

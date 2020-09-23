@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace nClam
+namespace nClam.Net
 {
     public class UnknownClamResponseException : Exception
     {

@@ -1,4 +1,4 @@
-﻿namespace nClam
+﻿namespace nClam.Net
 {
     /// <summary>
     /// The results of an infected file.

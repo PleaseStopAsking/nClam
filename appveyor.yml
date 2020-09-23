@@ -4,6 +4,6 @@ configuration: Release
 build_script:
 - ps: dotnet build -c Release
 test_script:
-- ps: pushd nClam.Tests; dotnet test; popd
+- ps: pushd nClam.Net.Tests; dotnet test; popd
 artifacts:
-- path: nClam\bin\Release\*.nupkg
+- path: nClam.Net\bin\Release\*.nupkg

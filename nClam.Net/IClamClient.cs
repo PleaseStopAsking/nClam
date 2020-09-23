@@ -2,7 +2,7 @@
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace nClam
+namespace nClam.Net
 {
     public interface IClamClient
     {
