@@ -1,6 +1,8 @@
 # nClam.Net
 nClam.Net is a tiny library which helps you scan files or directories using a ClamAV server.  It contains a simple API which encapsulates the communication with the ClamAV server as well as the parsing of its results.  The library is licensed under the Apache License 2.0.
 
+## Note: This repo was forked from the original nClam project so a fix could be implemented that went ignored by the nClam maintainers. With that said, this repo should not be relied upon without consideration of long term support. If and when the nClam resolves the original issue, I will likely migrate my use back to their package as I am not a full developer and maintaining this project is not feasible.
+
 ## Dependencies
 ClamAV Server, also known as clamd.  It is a free, open-source virus scanner.  Win32 ports can be obtained here: http://oss.netfarm.it/clamav/
 

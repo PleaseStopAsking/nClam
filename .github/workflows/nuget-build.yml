@@ -3,6 +3,9 @@ name: Nuget Build
 on:
   push:
     branches: [master]
+    paths-ignore:
+      - "README.md"
+      - "LICENSE"
   pull_request:
     branches: [master]
 
